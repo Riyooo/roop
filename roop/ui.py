@@ -53,7 +53,8 @@ def create_root(start: Callable[[], None], destroy: Callable[[], None]) -> ctk.C
 
     root = ctk.CTk()
     root.minsize(ROOT_WIDTH, ROOT_HEIGHT)
-    root.title(f'{roop.metadata.name} {roop.metadata.version}')
+    #root.title(f'{roop.metadata.name} {roop.metadata.version}')
+    root.title('Roop - A One-Click Face Swapper')
     root.configure()
     root.protocol('WM_DELETE_WINDOW', lambda: destroy())
 
