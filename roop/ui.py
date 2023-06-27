@@ -140,10 +140,10 @@ def create_root(start: Callable[[], None], destroy: Callable[[], None]) -> ctk.C
     status_label = ctk.CTkLabel(root, text=None, justify='center')
     status_label.place(relx=0.1, rely=0.9, relwidth=0.8)
 
-    donate_label = ctk.CTkLabel(root, text='^_^ Donate to project ^_^', justify='center', cursor='hand2')
-    donate_label.place(relx=0.1, rely=0.95, relwidth=0.8)
-    donate_label.configure(text_color=ctk.ThemeManager.theme.get('RoopDonate').get('text_color'))
-    donate_label.bind('<Button>', lambda event: webbrowser.open('https://github.com/sponsors/s0md3v'))
+    repo_label = ctk.CTkLabel(root, text=f'View on Github - Roop v{roop.metadata.version}', justify='center', cursor='hand2')
+    repo_label.place(relx=0.1, rely=0.95, relwidth=0.8)
+    repo_label.configure(text_color=ctk.ThemeManager.theme.get('RoopDonate').get('text_color'))
+    repo_label.bind('<Button>', lambda event: webbrowser.open('https://github.com/Riyooo/roop'))
 
     return root
 
